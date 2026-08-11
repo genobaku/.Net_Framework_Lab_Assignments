@@ -1,0 +1,13 @@
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\bin\Debug\net48\StudentClient.exe.config
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\bin\Debug\net48\StudentClient.exe
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\bin\Debug\net48\StudentClient.pdb
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\bin\Debug\net48\StudentLibrary.dll
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\bin\Debug\net48\StudentLibrary.pdb
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.csproj.AssemblyReference.cache
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.AssemblyInfoInputs.cache
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.AssemblyInfo.cs
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.csproj.CoreCompileInputs.cache
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentC.916A0022.Up2Date
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.exe
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.pdb

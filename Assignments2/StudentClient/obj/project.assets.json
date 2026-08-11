@@ -1,0 +1,100 @@
+{
+  "version": 4,
+  "targets": {
+    "net48": {
+      "StudentLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/StudentLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StudentLibrary.dll": {}
+        }
+      }
+    },
+    "net48/win-x86": {
+      "StudentLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/StudentLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StudentLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StudentLibrary/1.0.0": {
+      "type": "project",
+      "path": "../StudentLibrary/StudentLibrary.csproj",
+      "msbuildProject": "../StudentLibrary/StudentLibrary.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net48": [
+      "StudentLibrary >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\anuga\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Programming\\2026\\Learning\\.net\\Assignments2\\StudentClient\\StudentClient.csproj",
+      "projectName": "StudentClient",
+      "projectPath": "D:\\Programming\\2026\\Learning\\.net\\Assignments2\\StudentClient\\StudentClient.csproj",
+      "packagesPath": "C:\\Users\\anuga\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\2026\\Learning\\.net\\Assignments2\\StudentClient\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\anuga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "framework": "net48",
+          "targetAlias": "net48",
+          "projectReferences": {
+            "D:\\Programming\\2026\\Learning\\.net\\Assignments2\\StudentLibrary\\StudentLibrary.csproj": {
+              "projectPath": "D:\\Programming\\2026\\Learning\\.net\\Assignments2\\StudentLibrary\\StudentLibrary.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.300"
+    },
+    "frameworks": {
+      "net48": {
+        "framework": "net48",
+        "targetAlias": "net48",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
