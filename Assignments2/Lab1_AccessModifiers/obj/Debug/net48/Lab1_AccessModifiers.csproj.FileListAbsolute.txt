@@ -8,3 +8,4 @@ D:\Programming\2026\Learning\.net\Assignments2\Lab1_AccessModifiers\obj\Debug\ne
 D:\Programming\2026\Learning\.net\Assignments2\Lab1_AccessModifiers\obj\Debug\net48\Lab1_AccessModifiers.csproj.CoreCompileInputs.cache
 D:\Programming\2026\Learning\.net\Assignments2\Lab1_AccessModifiers\obj\Debug\net48\Lab1_AccessModifiers.exe
 D:\Programming\2026\Learning\.net\Assignments2\Lab1_AccessModifiers\obj\Debug\net48\Lab1_AccessModifiers.pdb
+D:\Programming\2026\Learning\.net\Assignments2\Lab1_AccessModifiers\obj\Debug\net48\Lab1_AccessModifiers.sourcelink.json

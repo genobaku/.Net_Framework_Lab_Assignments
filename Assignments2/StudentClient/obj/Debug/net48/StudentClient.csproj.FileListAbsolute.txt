@@ -11,3 +11,4 @@ D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\Stu
 D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentC.916A0022.Up2Date
 D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.exe
 D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.pdb
+D:\Programming\2026\Learning\.net\Assignments2\StudentClient\obj\Debug\net48\StudentClient.sourcelink.json
