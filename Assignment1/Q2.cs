@@ -1,9 +1,14 @@
 using System;
 
-class ArithmeticOperations
+namespace Assignment1;
+
+public static class Q2
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q2: Arithmetic Operations ===");
+
         int num1, num2;
 
         Console.Write("Enter First Number: ");
@@ -12,7 +17,8 @@ class ArithmeticOperations
         Console.Write("Enter Second Number: ");
         num2 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("\n----- Arithmetic Operations -----");
+        Console.WriteLine();
+        Console.WriteLine("----- Arithmetic Operations -----");
         Console.WriteLine("Sum = " + (num1 + num2));
         Console.WriteLine("Difference = " + (num1 - num2));
         Console.WriteLine("Product = " + (num1 * num2));

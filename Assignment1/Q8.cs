@@ -1,9 +1,14 @@
 using System;
 
-class Prime
+namespace Assignment1;
+
+public static class Q8
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q8: Prime Number ===");
+
         int n, count = 0;
 
         Console.Write("Enter a Number: ");

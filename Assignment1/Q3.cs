@@ -1,9 +1,14 @@
 using System;
 
-class CheckNumber
+namespace Assignment1;
+
+public static class Q3
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q3: Positive / Negative / Zero ===");
+
         int number;
 
         Console.Write("Enter a number: ");

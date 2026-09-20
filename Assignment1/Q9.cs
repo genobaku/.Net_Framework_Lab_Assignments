@@ -1,9 +1,14 @@
 using System;
 
-class Palindrome
+namespace Assignment1;
+
+public static class Q9
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q9: Palindrome Number ===");
+
         int num, rem, rev = 0, temp;
 
         Console.Write("Enter a Number: ");

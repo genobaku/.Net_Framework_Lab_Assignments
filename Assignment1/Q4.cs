@@ -1,9 +1,14 @@
 using System;
 
-class Grade
+namespace Assignment1;
+
+public static class Q4
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q4: Grade Calculator ===");
+
         int marks;
 
         Console.Write("Enter Marks (0-100): ");

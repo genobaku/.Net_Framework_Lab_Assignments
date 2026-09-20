@@ -1,13 +1,19 @@
 using System;
 
-class MenuProgram
+namespace Assignment1;
+
+public static class Q10
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q10: Menu Program ===");
+
         int choice;
         do
         {
-            Console.WriteLine("\n----- MENU -----");
+            Console.WriteLine();
+            Console.WriteLine("----- MENU -----");
             Console.WriteLine("1. Check Even/Odd");
             Console.WriteLine("2. Find Largest of Three Numbers");
             Console.WriteLine("3. Calculate Factorial");

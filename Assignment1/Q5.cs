@@ -1,9 +1,14 @@
 using System;
 
-class Calculator
+namespace Assignment1;
+
+public static class Q5
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q5: Calculator ===");
+
         int a, b, choice;
 
         Console.Write("Enter First Number: ");
@@ -12,7 +17,8 @@ class Calculator
         Console.Write("Enter Second Number: ");
         b = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("\n1. Addition");
+        Console.WriteLine();
+        Console.WriteLine("1. Addition");
         Console.WriteLine("2. Subtraction");
         Console.WriteLine("3. Multiplication");
         Console.WriteLine("4. Division");

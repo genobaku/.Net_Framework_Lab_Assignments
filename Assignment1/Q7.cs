@@ -1,9 +1,14 @@
 using System;
 
-class Factorial
+namespace Assignment1;
+
+public static class Q7
 {
-    static void Main()
+    public static void Run()
     {
+        Console.Clear();
+        Console.WriteLine("=== Q7: Factorial ===");
+
         int n;
         long fact = 1;
 
