@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lab1_AccessModifiers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34077afcea0e5d3f5b069f66f08b23e203e2b2aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04be4e82ca96a7a0d86dd6156cf93f50185a63c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lab1_AccessModifiers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lab1_AccessModifiers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,7 +10,7 @@ internal class Program
         {
             Console.Clear();
             Console.WriteLine("========================================");
-            Console.WriteLine("       Random Assignment 4 Menu");
+            Console.WriteLine("       Assignment 4 Menu                ");
             Console.WriteLine("========================================");
             Console.WriteLine("1. Student Registration");
             Console.WriteLine("2. Simple Calculator");
