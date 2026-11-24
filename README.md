@@ -5,10 +5,11 @@ This repository contains multiple C# console application assignments for learnin
 ## Assignments
 
 - **Assignment1**: Basic C# programs covering student details, arithmetic, conditionals, loops, grade calculation, prime/palindrome checks, and menu-based programs.
+- **Assignments2**: .NET Framework assignment focused on access modifiers, inheritance, namespaces, and cross-assembly behavior.
 - **Assignment3**: Beginner-level console menu with student details, sum, even/odd, largest number, and factorial programs.
 - **Assignment4**: Practice assignment with student registration, calculator, array analysis, employee details, guessing game, and shape demo.
 - **Assignment5**: C# assignment project with menu-driven exercises covering arrays, classes, inheritance, method overloading, exception handling, and OOP concepts.
-- **Assignments2**: .NET Framework assignment focused on access modifiers, inheritance, namespaces, and cross-assembly behavior.
+- **Assignment6**: ADO.Net lab project , AQL Server database operattions, Connected CRUD Using SQLConnection, SQLCommand; and SQLDataReader.
 
 ## Run Projects
 
