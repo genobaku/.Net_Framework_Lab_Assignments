@@ -4,7 +4,7 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Linq;
 
-namespace Assignment5;
+namespace Assignment6;
 
 public sealed class Student
 {
@@ -18,10 +18,30 @@ public sealed class Student
 
 public static class StudentDatabase
 {
-    private const string ServerName = "(localdb)\\MSSQLLocalDB";
+    private static readonly string ServerName = ResolveServerName();
     private const string DatabaseName = "StudentDB";
     private static readonly string ConnectionString = $"Data Source={ServerName};Initial Catalog={DatabaseName};Integrated Security=True;TrustServerCertificate=True;";
     private static readonly string MasterConnectionString = $"Data Source={ServerName};Initial Catalog=master;Integrated Security=True;TrustServerCertificate=True;";
+
+    private static string ResolveServerName()
+    {
+        string[] candidates = { @".\SQLEXPRESS", @"localhost\SQLEXPRESS", @"(localdb)\MSSQLLocalDB", "localhost", "." };
+        foreach (var server in candidates)
+        {
+            try
+            {
+                var testConnStr = $"Data Source={server};Initial Catalog=master;Integrated Security=True;TrustServerCertificate=True;Connect Timeout=2;";
+                using var conn = new SqlConnection(testConnStr);
+                conn.Open();
+                return server;
+            }
+            catch
+            {
+                // try next candidate
+            }
+        }
+        return @".\SQLEXPRESS";
+    }
 
     public static void EnsureDatabaseAndTable()
     {

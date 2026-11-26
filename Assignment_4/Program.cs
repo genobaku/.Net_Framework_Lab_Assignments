@@ -2,289 +2,321 @@ using System;
 
 namespace Assignment4;
 
-internal class Program
+public delegate int SumDelegate(int a, int b);
+public delegate void LogDelegate(string message);
+public delegate double CalculatorDelegate(double a, double b);
+public delegate void NotificationDelegate(string message);
+public delegate double SalaryComponentDelegate(double basicSalary);
+public delegate void TaskDelegate(string taskName);
+
+public class Program
 {
-    private static void Main()
+    public static void Main()
     {
         while (true)
         {
-            Console.Clear();
-            Console.WriteLine("========================================");
-            Console.WriteLine("       Assignment 4 Menu                ");
-            Console.WriteLine("========================================");
-            Console.WriteLine("1. Student Registration");
-            Console.WriteLine("2. Simple Calculator");
-            Console.WriteLine("3. Array Analysis");
-            Console.WriteLine("4. Employee Details");
-            Console.WriteLine("5. Number Guessing Game");
-            Console.WriteLine("6. OOP Shape Demo");
+            SafeClear();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("              ASSIGNMENT 4: DELEGATES             ");
+            Console.WriteLine("==================================================");
+            Console.WriteLine("1. Question 1 (Theory - See Theory_Questions.md)");
+            Console.WriteLine("2. Question 2: Sum of Two Integers");
+            Console.WriteLine("3. Question 3: Unicast and Multicast Execution");
+            Console.WriteLine("4. Question 4: Calculator Operations");
+            Console.WriteLine("5. Question 5: Multicast Notification System");
+            Console.WriteLine("6. Question 6: Employee Salary Calculation");
+            Console.WriteLine("7. Question 7: Method Names and Invocation");
+            Console.WriteLine("8. Question 8: Action Delegate Execution");
+            Console.WriteLine("9. Question 9: Func Delegate Execution");
+            Console.WriteLine("10. Question 10: Predicate Delegate Execution");
+            Console.WriteLine("11. Run All Programs");
             Console.WriteLine("0. Exit");
-            Console.WriteLine("========================================");
-            Console.Write("Choose an option: ");
+            Console.WriteLine("==================================================");
+            Console.Write("Select an option: ");
 
             string? choice = Console.ReadLine();
+            if (choice == null)
+            {
+                break;
+            }
 
-            switch (choice)
+            SafeClear();
+
+            switch (choice.Trim())
             {
                 case "1":
-                    StudentRegistration();
+                    Console.WriteLine("Question 1 is a theory question.");
+                    Console.WriteLine("Complete explanation, purpose, and syntax are documented in Theory_Questions.md");
                     break;
                 case "2":
-                    Calculator();
+                    RunQuestion2();
                     break;
                 case "3":
-                    ArrayAnalysis();
+                    RunQuestion3();
                     break;
                 case "4":
-                    EmployeeDetails();
+                    RunQuestion4();
                     break;
                 case "5":
-                    NumberGuessingGame();
+                    RunQuestion5();
                     break;
                 case "6":
-                    ShapeDemo();
+                    RunQuestion6();
+                    break;
+                case "7":
+                    RunQuestion7();
+                    break;
+                case "8":
+                    RunQuestion8();
+                    break;
+                case "9":
+                    RunQuestion9();
+                    break;
+                case "10":
+                    RunQuestion10();
+                    break;
+                case "11":
+                    RunAllPrograms();
                     break;
                 case "0":
-                    Console.WriteLine("\nAssignment 4 closed.");
                     return;
                 default:
-                    Console.WriteLine("\nInvalid option. Try again.");
+                    Console.WriteLine("Invalid option. Please enter a number between 0 and 11.");
                     break;
             }
 
-            Console.WriteLine("\nPress any key to continue...");
-            Console.ReadKey();
+            Pause();
         }
     }
 
-    private static void StudentRegistration()
+    private static void SafeClear()
     {
-        Console.Clear();
-        Console.WriteLine("=== Student Registration ===");
-
-        Console.Write("Enter student name: ");
-        string name = Console.ReadLine() ?? "Unknown";
-
-        Console.Write("Enter roll number: ");
-        int rollNo = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write("Enter course: ");
-        string course = Console.ReadLine() ?? "N/A";
-
-        Console.WriteLine();
-        Console.WriteLine("Registration Successful");
-        Console.WriteLine($"Name: {name}");
-        Console.WriteLine($"Roll Number: {rollNo}");
-        Console.WriteLine($"Course: {course}");
-    }
-
-    private static void Calculator()
-    {
-        Console.Clear();
-        Console.WriteLine("=== Calculator ===");
-
-        Console.Write("Enter first number: ");
-        double a = Convert.ToDouble(Console.ReadLine());
-
-        Console.Write("Enter second number: ");
-        double b = Convert.ToDouble(Console.ReadLine());
-
-        Console.Write("Choose operator (+, -, *, /): ");
-        char op = Convert.ToChar(Console.ReadLine() ?? "+");
-
-        double result = 0;
-
-        switch (op)
+        try
         {
-            case '+':
-                result = a + b;
-                break;
-            case '-':
-                result = a - b;
-                break;
-            case '*':
-                result = a * b;
-                break;
-            case '/':
-                if (b == 0)
-                {
-                    Console.WriteLine("Division by zero is not allowed.");
-                    return;
-                }
-                result = a / b;
-                break;
-            default:
-                Console.WriteLine("Invalid operator.");
-                return;
+            if (!Console.IsOutputRedirected)
+            {
+                Console.Clear();
+            }
         }
-
-        Console.WriteLine($"Result: {result}");
+        catch
+        {
+        }
     }
 
-    private static void ArrayAnalysis()
+    private static void Pause()
     {
-        Console.Clear();
-        Console.WriteLine("=== Array Analysis ===");
-
-        Console.Write("How many values? ");
-        int size = Convert.ToInt32(Console.ReadLine());
-
-        int[] values = new int[size];
-        int sum = 0;
-        int max = int.MinValue;
-        int min = int.MaxValue;
-
-        for (int i = 0; i < size; i++)
-        {
-            Console.Write($"Enter value {i + 1}: ");
-            values[i] = Convert.ToInt32(Console.ReadLine());
-            sum += values[i];
-
-            if (values[i] > max)
-                max = values[i];
-
-            if (values[i] < min)
-                min = values[i];
-        }
-
         Console.WriteLine();
-        Console.WriteLine("Values entered: " + string.Join(", ", values));
+        Console.WriteLine("Press Enter to continue...");
+        Console.ReadLine();
+    }
+
+    private static void RunAllPrograms()
+    {
+        RunQuestion2();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion3();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion4();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion5();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion6();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion7();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion8();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion9();
+        Console.WriteLine("\n--------------------------------------------------\n");
+        RunQuestion10();
+    }
+
+    private static void RunQuestion2()
+    {
+        Console.WriteLine("=== Question 2: Sum of Two Integers ===");
+        SumDelegate del = Add;
+        int a = 25;
+        int b = 35;
+        int sum = del(a, b);
+        Console.WriteLine($"First Number: {a}");
+        Console.WriteLine($"Second Number: {b}");
         Console.WriteLine($"Sum: {sum}");
-        Console.WriteLine($"Average: {(double)sum / size:F2}");
-        Console.WriteLine($"Maximum: {max}");
-        Console.WriteLine($"Minimum: {min}");
     }
 
-    private static void EmployeeDetails()
+    private static int Add(int a, int b) => a + b;
+
+    private static void RunQuestion3()
     {
-        Console.Clear();
-        Console.WriteLine("=== Employee Details ===");
-
-        Employee employee = new Employee();
-
-        Console.Write("Enter employee name: ");
-        employee.Name = Console.ReadLine() ?? "Unknown";
-
-        Console.Write("Enter employee ID: ");
-        employee.Id = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write("Enter salary: ");
-        employee.Salary = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("=== Question 3: Unicast and Multicast Delegates ===");
+        LogDelegate unicast = PrintConsole;
+        Console.WriteLine("Unicast Invocation:");
+        unicast("Executing unicast target.");
 
         Console.WriteLine();
-        Console.WriteLine("Employee Information");
-        Console.WriteLine($"Name: {employee.Name}");
-        Console.WriteLine($"ID: {employee.Id}");
-        Console.WriteLine($"Salary: {employee.Salary:C}");
+        LogDelegate multicast = PrintConsole;
+        multicast += PrintFile;
+        Console.WriteLine("Multicast Invocation:");
+        multicast("Executing multicast targets.");
     }
 
-    private static void NumberGuessingGame()
+    private static void PrintConsole(string message) => Console.WriteLine("[Console] " + message);
+    private static void PrintFile(string message) => Console.WriteLine("[File] " + message);
+
+    private static void RunQuestion4()
     {
-        Console.Clear();
-        Console.WriteLine("=== Number Guessing Game ===");
+        Console.WriteLine("=== Question 4: Calculator Operations ===");
+        CalculatorDelegate calc;
+        double a = 12.0;
+        double b = 4.0;
 
-        Random random = new Random();
-        int target = random.Next(1, 101);
-        int attempts = 0;
+        Console.WriteLine($"Inputs: a = {a}, b = {b}");
 
-        while (true)
+        calc = AddValues;
+        Console.WriteLine($"Addition: {calc(a, b)}");
+
+        calc = SubtractValues;
+        Console.WriteLine($"Subtraction: {calc(a, b)}");
+
+        calc = MultiplyValues;
+        Console.WriteLine($"Multiplication: {calc(a, b)}");
+
+        calc = DivideValues;
+        Console.WriteLine($"Division: {calc(a, b)}");
+    }
+
+    private static double AddValues(double a, double b) => a + b;
+    private static double SubtractValues(double a, double b) => a - b;
+    private static double MultiplyValues(double a, double b) => a * b;
+    private static double DivideValues(double a, double b) => b != 0 ? a / b : 0;
+
+    private static void RunQuestion5()
+    {
+        Console.WriteLine("=== Question 5: Notification Services ===");
+        NotificationDelegate notify = SendEmail;
+        notify += SendSms;
+        notify += SendWhatsApp;
+
+        string alert = "Order #84920 shipped successfully.";
+        notify(alert);
+    }
+
+    private static void SendEmail(string message) => Console.WriteLine("[Email] " + message);
+    private static void SendSms(string message) => Console.WriteLine("[SMS] " + message);
+    private static void SendWhatsApp(string message) => Console.WriteLine("[WhatsApp] " + message);
+
+    private static void RunQuestion6()
+    {
+        Console.WriteLine("=== Question 6: Employee Salary Calculation ===");
+        double basicSalary = 60000.0;
+        Console.WriteLine($"Basic Salary: {basicSalary:C}");
+        Console.WriteLine();
+
+        SalaryComponentDelegate salaryChain = GetBasic;
+        salaryChain += GetHra;
+        salaryChain += GetDa;
+        salaryChain += GetBonus;
+
+        double total = 0;
+        foreach (Delegate del in salaryChain.GetInvocationList())
         {
-            Console.Write("Guess a number between 1 and 100: ");
-            int guess = Convert.ToInt32(Console.ReadLine());
-            attempts++;
+            SalaryComponentDelegate comp = (SalaryComponentDelegate)del;
+            double value = comp(basicSalary);
+            total += value;
+            Console.WriteLine($"{del.Method.Name}: {value:C}");
+        }
 
-            if (guess < target)
-            {
-                Console.WriteLine("Too low. Try again.");
-            }
-            else if (guess > target)
-            {
-                Console.WriteLine("Too high. Try again.");
-            }
-            else
-            {
-                Console.WriteLine($"Correct! You guessed it in {attempts} attempts.");
-                break;
-            }
+        Console.WriteLine();
+        Console.WriteLine($"Total Salary: {total:C}");
+    }
+
+    private static double GetBasic(double basic) => basic;
+    private static double GetHra(double basic) => basic * 0.20;
+    private static double GetDa(double basic) => basic * 0.10;
+    private static double GetBonus(double basic) => basic * 0.15;
+
+    private static void RunQuestion7()
+    {
+        Console.WriteLine("=== Question 7: Method Names and Individual Invocation ===");
+        TaskDelegate tasks = InitializeStep;
+        tasks += ProcessStep;
+        tasks += FinalizeStep;
+
+        Delegate[] list = tasks.GetInvocationList();
+        Console.WriteLine($"Total Methods: {list.Length}");
+        Console.WriteLine();
+
+        foreach (Delegate del in list)
+        {
+            Console.WriteLine($"Method Name: {del.Method.Name}");
+            TaskDelegate target = (TaskDelegate)del;
+            target("BatchTask_01");
         }
     }
 
-    private static void ShapeDemo()
+    private static void InitializeStep(string task) => Console.WriteLine("Initialized: " + task);
+    private static void ProcessStep(string task) => Console.WriteLine("Processed: " + task);
+    private static void FinalizeStep(string task) => Console.WriteLine("Finalized: " + task);
+
+    private static void RunQuestion8()
     {
-        Console.Clear();
-        Console.WriteLine("=== Shape Demo ===");
+        Console.WriteLine("=== Question 8: Built-in Action Delegate ===");
+        Action<string> action = LogGreeting;
+        Console.WriteLine("Unicast Action:");
+        action("Student");
 
-        Shape[] shapes =
-        {
-            new Circle(5),
-            new Rectangle(4, 6),
-            new Triangle(3, 8)
-        };
+        Console.WriteLine();
+        action += LogFarewell;
+        Console.WriteLine("Multicast Action:");
+        action("Student");
+    }
 
-        foreach (Shape shape in shapes)
+    private static void LogGreeting(string name) => Console.WriteLine("Hello, " + name);
+    private static void LogFarewell(string name) => Console.WriteLine("Goodbye, " + name);
+
+    private static void RunQuestion9()
+    {
+        Console.WriteLine("=== Question 9: Built-in Func Delegate ===");
+        Func<int, int> singleFunc = Square;
+        Console.WriteLine($"Single Func (Square of 7): {singleFunc(7)}");
+        Console.WriteLine();
+
+        Func<int, int> multiFunc = Square;
+        multiFunc += Cube;
+        multiFunc += DoubleValue;
+
+        int input = 4;
+        Console.WriteLine($"Multicast Func with input {input}:");
+        foreach (Delegate del in multiFunc.GetInvocationList())
         {
-            Console.WriteLine($"{shape.GetType().Name}: Area = {shape.CalculateArea():F2}");
+            Func<int, int> target = (Func<int, int>)del;
+            int result = target(input);
+            Console.WriteLine($"{del.Method.Name}({input}) = {result}");
         }
     }
-}
 
-public class Employee
-{
-    public string Name { get; set; } = "";
-    public int Id { get; set; }
-    public double Salary { get; set; }
-}
+    private static int Square(int x) => x * x;
+    private static int Cube(int x) => x * x * x;
+    private static int DoubleValue(int x) => x * 2;
 
-public abstract class Shape
-{
-    public abstract double CalculateArea();
-}
-
-public class Circle : Shape
-{
-    public Circle(double radius)
+    private static void RunQuestion10()
     {
-        Radius = radius;
+        Console.WriteLine("=== Question 10: Built-in Predicate Delegate ===");
+        Predicate<int> predicateChain = IsEven;
+        predicateChain += IsPositive;
+        predicateChain += IsGreaterThan100;
+
+        int testNumber = 150;
+        Console.WriteLine($"Evaluating number: {testNumber}");
+
+        foreach (Delegate del in predicateChain.GetInvocationList())
+        {
+            Predicate<int> target = (Predicate<int>)del;
+            bool passes = target(testNumber);
+            Console.WriteLine($"{del.Method.Name}({testNumber}): {passes}");
+        }
     }
 
-    public double Radius { get; set; }
-
-    public override double CalculateArea()
-    {
-        return Math.PI * Radius * Radius;
-    }
-}
-
-public class Rectangle : Shape
-{
-    public Rectangle(double width, double height)
-    {
-        Width = width;
-        Height = height;
-    }
-
-    public double Width { get; set; }
-    public double Height { get; set; }
-
-    public override double CalculateArea()
-    {
-        return Width * Height;
-    }
-}
-
-public class Triangle : Shape
-{
-    public Triangle(double baseValue, double height)
-    {
-        Base = baseValue;
-        Height = height;
-    }
-
-    public double Base { get; set; }
-    public double Height { get; set; }
-
-    public override double CalculateArea()
-    {
-        return 0.5 * Base * Height;
-    }
+    private static bool IsEven(int n) => n % 2 == 0;
+    private static bool IsPositive(int n) => n > 0;
+    private static bool IsGreaterThan100(int n) => n > 100;
 }

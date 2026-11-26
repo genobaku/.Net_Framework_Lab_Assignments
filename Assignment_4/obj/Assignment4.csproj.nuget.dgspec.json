@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\2026\\Learning\\.net\\Assignment4\\Assignment4.csproj": {}
+    "D:\\Programming\\2026\\Learning\\.net\\Assignment_4\\Assignment4.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\2026\\Learning\\.net\\Assignment4\\Assignment4.csproj": {
+    "D:\\Programming\\2026\\Learning\\.net\\Assignment_4\\Assignment4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\2026\\Learning\\.net\\Assignment4\\Assignment4.csproj",
+        "projectUniqueName": "D:\\Programming\\2026\\Learning\\.net\\Assignment_4\\Assignment4.csproj",
         "projectName": "Assignment4",
-        "projectPath": "D:\\Programming\\2026\\Learning\\.net\\Assignment4\\Assignment4.csproj",
+        "projectPath": "D:\\Programming\\2026\\Learning\\.net\\Assignment_4\\Assignment4.csproj",
         "packagesPath": "C:\\Users\\anuga\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\2026\\Learning\\.net\\Assignment4\\obj\\",
+        "outputPath": "D:\\Programming\\2026\\Learning\\.net\\Assignment_4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anuga\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,7 +41,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100-rc.3.26522.148/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

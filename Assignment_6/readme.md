@@ -4,27 +4,26 @@ This C# console application demonstrates connected and disconnected ADO.NET oper
 
 It covers:
 
-1. Read, insert, update, and delete with connected architecture.
+1. Read, insert, update, and delete with connected architecture (`SqlConnection`, `SqlCommand`, `SqlDataReader`).
 2. Read, insert, update, and delete with disconnected architecture using `DataSet` and `SqlDataAdapter`.
 3. Insert, update, and delete with `SqlCommandBuilder`.
 4. A comparison of connected and disconnected architectures.
 
 ## Requirements
 
-- .NET 11 SDK
-- SQL Server LocalDB
+- .NET 10 SDK / Visual Studio 2022
+- SQL Server (SQLEXPRESS, LocalDB, or default instance)
 
-The application creates the `StudentDB` database and `Student` table in LocalDB when they do not already exist. It adds sample records when the table is empty.
+The application automatically connects to your available SQL Server instance (`.\SQLEXPRESS` or `(localdb)\MSSQLLocalDB`), creates the `StudentDB` database and `Student` table if they do not already exist, and seeds initial data.
 
-## Run
+## Running in Visual Studio
 
-Open PowerShell in the project folder and run:
+1. Open `Assignment6.sln` (or `Assignment6.csproj`) in **Visual Studio 2022**.
+2. Press **F5** (or **Ctrl + F5**) to build and run.
 
-```powershell
-& "C:\Program Files\dotnet\dotnet.exe" run
-```
+## Running from Command Line
 
-Or, if `dotnet` is available on your `PATH`:
+Open a terminal in this folder and run:
 
 ```powershell
 dotnet run
